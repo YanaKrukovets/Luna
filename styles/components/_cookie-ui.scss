@@ -1,0 +1,75 @@
+.CookieConsent {
+  border-radius: 8px;
+  padding:25px;
+  border: 8px white solid;
+
+  @media (max-width: 1200px) {
+    width: 80% !important;
+    left: 10% !important;
+    top: 22% !important;
+  }
+
+  @media (max-width: 768px) {
+    display: block !important;
+    padding-top: 15px;
+    top: 15% !important;
+  }
+
+  button {
+    padding: 14px 35px !important;
+    border-radius: 10px !important;
+    font-size: 18px;
+    position: relative;
+
+    @media (max-width: 768px) {
+      padding: 12px 15px !important;
+    }
+
+    @media(max-width: 576px){
+      line-height: 22px;
+      font-size:100%;
+    }
+  }
+  
+  div:first-child {
+    flex: none !important;
+    padding: 25px;
+    margin: 0 !important;
+    width: 100% !important;
+    @media (max-width: 576px){
+      padding: 0;
+      margin-top: 60px !important;
+      margin-bottom: 20px !important;
+    }
+  }
+  div:last-child {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 15px 15px 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 840px) {
+      flex-direction: column-reverse;
+      padding: 20px 10px 10px;
+      max-width: 80%;
+      min-width: 200px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    width: 90% !important;
+    left: 5% !important;
+  }
+
+  @media(max-width: 576px){
+    padding-bottom: 0;
+  }
+
+  div:has(> button) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
