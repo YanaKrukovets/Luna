@@ -14,6 +14,12 @@ export default function HomeBannerNew() {
   return (
     <>
       <div className="flex mx-auto justify-center">
+        <div class="bg-animation">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+          <div id="stars4"></div>
+        </div>
         <Image
           src="/images/components/banner.png"
           alt="hero banner"

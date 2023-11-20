@@ -23,22 +23,8 @@ export default function Header() {
     nav = {
       item1: {
         label:
-          "<span class='whitespace-nowrap lg:whitespace-normal'>link1</span>",
-        href: "link1",
-        submenu: [
-          {
-            title: "link",
-            url: "link1",
-          },
-          {
-            title: "link1",
-            url: "link1#symptoms",
-          },
-          {
-            title: "link2",
-            url: "link1#activities",
-          },
-        ],
+          "<span class='whitespace-nowrap lg:whitespace-normal'>Books</span>",
+        href: "books",
       },
       item2: {
         label:
@@ -55,21 +41,7 @@ export default function Header() {
       item1: {
         label:
           "<span class='whitespace-nowrap lg:whitespace-normal'>link1</span>",
-        href: "link1",
-        submenu: [
-          {
-            title: "link",
-            url: "link1",
-          },
-          {
-            title: "link2",
-            url: "link2",
-          },
-          {
-            title: "link3",
-            url: "link3",
-          },
-        ],
+        href: "books",
       },
       item2: {
         label:
@@ -138,57 +110,22 @@ export default function Header() {
                 menu.map((item, index) => {
                   return (
                     <>
-                      {item.submenu ? (
-                        <>
-                          <div
-                            className="sub-menu-wrapper"
-                            onMouseLeave={() => setIsSubmenu(false)}
-                            key={item.label}
-                          >
-                            <a
-                              onMouseEnter={() => setIsSubmenu(true)}
-                              href={
-                                locale == "fr" ? "/fr/disorder" : "/disorder"
-                              }
-                              className={`text-left text-gray flex items-center ${
-                                router.pathname == "/disorder" ? "active" : ""
-                              }`}
-                            >
-                              <span
-                                className={`desktop-nav-text block px-5 bg-white border-l-[6px] border-[transparent] ${
-                                  isSubmenu && router.pathname != "/disorder"
-                                    ? "!border-yellow"
-                                    : ""
-                                }`}
-                                dangerouslySetInnerHTML={{ __html: item.label }}
-                              ></span>
-                            </a>
-                            <div
-                              className={`${
-                                isSubmenu ? "block relative z-10" : "hidden"
-                              }`}
-                              ref={subMenu}
-                            ></div>
-                          </div>
-                        </>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={item.label}
-                          className={`${
-                            router.pathname == "/" + item.href ? "active" : ""
-                          } desktop-nav-item transition-all`}
-                        >
-                          <span
-                            className={`desktop-nav-text ${
-                              locale === "en"
-                                ? "!flex flex-col xmd:inline-block"
-                                : ""
-                            }`}
-                            dangerouslySetInnerHTML={{ __html: item.label }}
-                          ></span>
-                        </Link>
-                      )}
+                      <Link
+                        href={item.href}
+                        key={item.label}
+                        className={`${
+                          router.pathname == "/" + item.href ? "active" : ""
+                        } desktop-nav-item transition-all`}
+                      >
+                        <span
+                          className={`desktop-nav-text ${
+                            locale === "en"
+                              ? "!flex flex-col xmd:inline-block"
+                              : ""
+                          }`}
+                          dangerouslySetInnerHTML={{ __html: item.label }}
+                        ></span>
+                      </Link>
                     </>
                   );
                 })}
