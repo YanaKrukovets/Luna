@@ -14,7 +14,11 @@ export default function HomePage() {
   return (
     <>
       <HomeBannerNew />
-      <div className="max-w-wrapper mx-auto px-5 flex justify-between my-[70px] disorder-wrapper md:flex-col md:my-[48px]"></div>
+      <div className="max-w-wrapper mx-auto px-5 flex justify-between my-[70px] disorder-wrapper md:flex-col md:my-[48px]">
+        <p className="text-center text-[40px] mx-auto">
+          The site will be soon...
+        </p>
+      </div>
     </>
   );
 }

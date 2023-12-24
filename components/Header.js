@@ -22,16 +22,22 @@ export default function Header() {
   if (locale === "en") {
     nav = {
       item1: {
+        img: "/images/icons/book-icon.png",
+        alt: "book icon",
         label:
           "<span class='whitespace-nowrap lg:whitespace-normal'>Books</span>",
         href: "books",
       },
       item2: {
+        img: "/images/icons/book-icon.png",
+        alt: "book icon",
         label:
           "<span class='whitespace-nowrap lg:whitespace-normal'>link2</span>",
         href: "link2",
       },
       item3: {
+        img: "/images/icons/book-icon.png",
+        alt: "book icon",
         label: "<span class='whitespace-nowrap lg:whitespace-normal'>link3",
         href: "link3",
       },
@@ -92,7 +98,7 @@ export default function Header() {
                 <Link href="/" passHref>
                   <img
                     src={t.header.nav_logo_src}
-                    className="w-full mx-auto my-auto"
+                    className="w-full max-w-[250px] mx-auto mt-[10px]"
                     alt={t.header.nav_logo_alt}
                   />
                 </Link>
@@ -101,7 +107,7 @@ export default function Header() {
 
             {/* Desktop Nav */}
 
-            <div
+            {/*<div
               className={`desktop-nav ${
                 locale == "en" ? "" : "desktop-nav-fr"
               }`}
@@ -117,6 +123,11 @@ export default function Header() {
                           router.pathname == "/" + item.href ? "active" : ""
                         } desktop-nav-item transition-all`}
                       >
+                        <img
+                          className={`desktop-nav-icon`}
+                          src={item.img}
+                          alt={item.alt}
+                        />
                         <span
                           className={`desktop-nav-text ${
                             locale === "en"
@@ -129,11 +140,11 @@ export default function Header() {
                     </>
                   );
                 })}
-            </div>
+              </div>*/}
 
             {/* Mobile Nav */}
 
-            <div className={`mobile-nav ${mobileNavExpanded ? "block" : ""}`}>
+            {/*<div className={`mobile-nav ${mobileNavExpanded ? "block" : ""}`}>
               {!!menu &&
                 menu.map((item, index) => {
                   return (
@@ -169,7 +180,7 @@ export default function Header() {
                   );
                 })}
               <NavLangToggle />
-            </div>
+            </div> */}
 
             {/* Language Toggle */}
             <div className="flex-end hidden">

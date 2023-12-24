@@ -42,10 +42,6 @@ module.exports = {
         inner: "2000px",
         wrapper: "1238px",
       },
-      backgroundImage: {
-        "gray-bg": "url('/images/components/home/banner-bg.png')",
-        "disorder-bg": "url('/images/pages/disorder/disorder-banner.png')",
-      },
     },
   },
   variants: {

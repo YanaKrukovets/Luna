@@ -1,5 +1,5 @@
 export default {
-  hand: "Scroll left to view table",
+  hand: "Scroll",
   header: {
     nav_logo_src: "/images/logos/logo-en.png",
     nav_logo_alt: "logo",
@@ -13,13 +13,13 @@ export default {
     terms_url: "/link",
     contact_text: "Contact Us",
     contact_url: "/link",
-    text: "<p>© 2023. All rights reserved.</p>",
+    text: "© 2023. All rights reserved.",
   },
 
   home: {
     learn_more: "Learn more",
     girl_alt: "girl",
-    girl2_alt: "girl with a dog",
-    man_alt: "man near the computer",
+    girl2_alt: "text",
+    man_alt: "text",
   },
 };

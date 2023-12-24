@@ -545,13 +545,14 @@ header .desktop-nav .desktop-nav-item {
 }
 header .desktop-nav .desktop-nav-item .desktop-nav-text {
   font-size: 16px;
-  color: #555b5e;
+  color: #314858;
   line-height: 18px;
   text-decoration: none;
   position: relative;
   display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
+  text-transform: uppercase;
 }
 header .desktop-nav-fr {
   margin-right: 0px;

@@ -12,11 +12,11 @@ export default function Footer() {
   const t = locale === "en" ? en : fr;
 
   return (
-    <footer className="max-w-inner xxxl:px-0">
-      <div className="footer-wrapper bg-gray">
+    <footer className="max-w-inner xxxl:px-0 bg-lightBlue">
+      <div className="footer-wrapper">
         <div className="max-w-wrapper px-5 mx-auto">
           <div className="footer-nav">
-            <div className="md:flex md:justify-between">
+            {/*<div className="md:flex md:justify-between">
               <Link
                 className="sm:max-w-[165px]"
                 target="_blank"
@@ -36,7 +36,7 @@ export default function Footer() {
               <Link target="_blank" href={t.footer.contact_url}>
                 <strong>{t.footer.contact_text}</strong>
               </Link>
-            </div>
+  </div>*/}
           </div>
 
           <div className="flex items-center">
@@ -44,9 +44,10 @@ export default function Footer() {
               <div
                 className={`${
                   locale === "fr" ? "max-w-[450px]" : "max-w-[495px]"
-                } h-auto text-[12px] leading-[16px] grow-[2] basis-0 lg:w-full lg:my-5 lg:mx-0 text-white`}
-                dangerouslySetInnerHTML={{ __html: t.footer.text }}
-              ></div>
+                } h-auto text-[12px] leading-[16px] grow-[2] basis-0 lg:w-full lg:my-5 lg:mx-0`}
+              >
+                <p>{t.footer.text}</p>
+              </div>
             </div>
           </div>
         </div>
