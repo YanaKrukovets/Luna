@@ -21,24 +21,18 @@ export default function Header() {
 
   if (locale === "en") {
     nav = {
-      item1: {
-        img: "/images/icons/book-icon.png",
-        alt: "book icon",
-        label:
-          "<span class='whitespace-nowrap lg:whitespace-normal'>Books</span>",
-        href: "books",
-      },
       item2: {
         img: "/images/icons/book-icon.png",
         alt: "book icon",
         label:
-          "<span class='whitespace-nowrap lg:whitespace-normal'>link2</span>",
-        href: "link2",
+          "<span class='whitespace-nowrap lg:whitespace-normal'>About the books</span>",
+        href: "/about",
       },
       item3: {
-        img: "/images/icons/book-icon.png",
-        alt: "book icon",
-        label: "<span class='whitespace-nowrap lg:whitespace-normal'>link3",
+        img: "/images/icons/about-girl-author-icon.png",
+        alt: "author icon",
+        label:
+          "<span class='whitespace-nowrap lg:whitespace-normal'>About the author</span>",
         href: "link3",
       },
     };
@@ -88,7 +82,7 @@ export default function Header() {
 
   return (
     <>
-      <header>
+      <header className="fixed top-0 w-full bg-[#ffffff]">
         {/*Header Nav*/}
         <nav className="max-w-inner md:flex justify-between !xxx:px-0">
           <div className="logo text-grey flex justify-between max-w-wrapper px-5 sm:px-2 mx-auto w-full">
@@ -107,7 +101,7 @@ export default function Header() {
 
             {/* Desktop Nav */}
 
-            {/*<div
+            <div
               className={`desktop-nav ${
                 locale == "en" ? "" : "desktop-nav-fr"
               }`}
@@ -121,7 +115,7 @@ export default function Header() {
                         key={item.label}
                         className={`${
                           router.pathname == "/" + item.href ? "active" : ""
-                        } desktop-nav-item transition-all`}
+                        } desktop-nav-item transition-all hover:underline`}
                       >
                         <img
                           className={`desktop-nav-icon`}
@@ -140,11 +134,11 @@ export default function Header() {
                     </>
                   );
                 })}
-              </div>*/}
+            </div>
 
             {/* Mobile Nav */}
 
-            {/*<div className={`mobile-nav ${mobileNavExpanded ? "block" : ""}`}>
+            <div className={`mobile-nav ${mobileNavExpanded ? "block" : ""}`}>
               {!!menu &&
                 menu.map((item, index) => {
                   return (
@@ -180,7 +174,7 @@ export default function Header() {
                   );
                 })}
               <NavLangToggle />
-            </div> */}
+            </div>
 
             {/* Language Toggle */}
             <div className="flex-end hidden">

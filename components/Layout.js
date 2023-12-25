@@ -37,10 +37,7 @@ export default function Layout({ children }) {
           property="og:description"
           content="Children's story books about the guinea pigs."
         />
-        <meta
-          property="og:image"
-          content="https://undefined/img/og-image.png"
-        />
+        <meta property="og:image" content="../images/og-image.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="lunatheguineapig.com" />

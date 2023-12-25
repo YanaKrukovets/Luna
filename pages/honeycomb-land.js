@@ -1,11 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import HomeBannerNew from "../components/HomeBannerNew";
 
 import en from "../locales/en";
 import fr from "../locales/fr";
 
-export default function HomeBannerNew() {
+export default function HoneycombLand() {
   const router = useRouter();
 
   const { locale, asPath } = router;
@@ -13,13 +14,8 @@ export default function HomeBannerNew() {
 
   return (
     <>
-      <div className="flex mx-auto justify-center">
-        <Image
-          src="/images/components/banner.png"
-          alt="hero banner"
-          width={1440}
-          height={500}
-        />
+      <div className="max-w-inner my-[50px]">
+        <div className="max-w-wrapper px-5 mx-auto "></div>
       </div>
     </>
   );
